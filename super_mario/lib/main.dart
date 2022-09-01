@@ -1,13 +1,11 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'homepage.dart';
+import 'package:super_mario/splash_screen.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft])
-      .then((_) {
-    runApp(MyApp());
-  });
+  runApp(MyApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+      home: splashScreen(),
     );
   }
 }
